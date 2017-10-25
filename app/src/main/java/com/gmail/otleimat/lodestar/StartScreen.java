@@ -33,6 +33,9 @@ public class StartScreen extends AppCompatActivity {
         }
     }
     public void enableBluetooth(View v){
-        bluetooth.enable();
+        if (bluetooth.enable()){
+            BluetoothOn.setVisibility(View.INVISIBLE);
+            startText.setText("Bluetooth enabled successfully");
+        }
     }
 }
