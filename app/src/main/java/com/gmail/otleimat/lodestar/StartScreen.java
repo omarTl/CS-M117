@@ -6,24 +6,25 @@ import android.bluetooth.*;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 
 public class StartScreen extends AppCompatActivity {
     private BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
-    private TextView startText;
-    private Button BluetoothOn;
+    private ViewFlipper viewFlipper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
-        startText = (TextView) findViewById(R.id.start_text);
-        BluetoothOn = (Button) findViewById(R.id.enable_bluetooth);
-        BluetoothOn.setVisibility(View.INVISIBLE);
+        viewFlipper = (ViewFlipper) findViewById(R.id.view_flipper);
+        final Button BluetoothOn = (Button) findViewById(R.id.enable_bluetooth);
+        final TextView startText = (TextView) findViewById(R.id.start_text);
         // Check if bluetooth is available and enabled on the device
         if(bluetooth != null)
         {
             if (bluetooth.isEnabled()) {
-                startText.setText("Bluetooth found and is enabled :)");
+                viewFlipper.showNext();
             }
             else
             {
@@ -36,8 +37,13 @@ public class StartScreen extends AppCompatActivity {
     public void enableBluetooth(View v){
         // onClick Listener for enabling Bluetooth
         if (bluetooth.enable()){
-            BluetoothOn.setVisibility(View.INVISIBLE);
-            startText.setText("Bluetooth enabled successfully");
+            viewFlipper.showNext();
         }
+    }
+    public void victim(View v){
+
+    }
+    public void firstResponder(View v){
+
     }
 }

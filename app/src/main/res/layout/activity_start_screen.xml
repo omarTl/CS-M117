@@ -1,28 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_flipper"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/lodestar_logo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/lodestar" />
+        <TextView
+            android:id="@+id/start_text"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/not_found"
+            android:layout_below="@+id/lodestar_logo"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/enable_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/enable"
+            android:layout_below="@+id/start_text"
+            android:onClick="enableBluetooth" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/lodestar_logo1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/lodestar" />
+        <TextView
+            android:id="@+id/type_of_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Who do you identify as?"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lodestar_logo1" />
 
-    <ImageView
-        android:id="@+id/lodestar_logo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/lodestar" />
-    <TextView
-        android:id="@+id/start_text"
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/not_found"
-        android:layout_below="@+id/lodestar_logo"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/enable_bluetooth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/enable"
-        android:layout_below="@+id/start_text"
-        android:onClick="enableBluetooth" />
-
-</RelativeLayout>
+        <Button
+            android:id="@+id/responder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/responder"
+            android:layout_below="@+id/type_of_response"
+            android:onClick="responder" />
+        <Button
+            android:id="@+id/victim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/victim"
+            android:layout_below="@+id/responder"
+            android:onClick="victim" />
+    </RelativeLayout>
+</ViewFlipper>
