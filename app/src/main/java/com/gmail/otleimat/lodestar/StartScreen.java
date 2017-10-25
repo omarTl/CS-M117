@@ -43,10 +43,12 @@ public class StartScreen extends AppCompatActivity {
             viewFlipper.showNext();
         }
     }
+
     public void victim(View v){
         intent = new Intent(this, VictimScreen.class);
         startActivity(intent);
     }
+
     public void responder(View v){
         intent = new Intent(this, FirstResponderScreen.class);
         startActivity(intent);

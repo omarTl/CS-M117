@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent" >
+
     <ImageView
         android:id="@+id/lodestar_logo"
         android:layout_width="fill_parent"
@@ -31,6 +32,7 @@
                 android:layout_below="@+id/start_text"
                 android:onClick="enableBluetooth" />
         </RelativeLayout>
+        <!--Second layout if Bluetooth is enabled-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
