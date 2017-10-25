@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/enable"
-        android:layout_below="@+id/start_text" />
+        android:layout_below="@+id/start_text"
+        android:onClick="enableBluetooth" />
 
 </RelativeLayout>

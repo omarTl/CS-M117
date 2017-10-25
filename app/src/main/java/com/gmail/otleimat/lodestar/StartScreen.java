@@ -28,8 +28,11 @@ public class StartScreen extends AppCompatActivity {
             else
             {
                 startText.setText("Bluetooth not enabled");
-
+                BluetoothOn.setVisibility(View.VISIBLE);
             }
         }
+    }
+    public void enableBluetooth(View v){
+        bluetooth.enable();
     }
 }
