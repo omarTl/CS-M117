@@ -4,6 +4,6 @@
     <string name="enable">Turn Bluetooth on?</string>
     <string name="responder">First Responder</string>
     <string name="victim">Victim</string>
-    <string name="not_enabled">"Bluetooth not enabled"</string>
-    <string name="identity">Who do you identify as?</string>
+    <string name="not_enabled">Bluetooth found but not enabled</string>
+    <string name="identity">Bluetooth OK: Who do you identify as?</string>
 </resources>
