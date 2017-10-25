@@ -20,26 +20,26 @@ public class StartScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_screen);
         viewFlipper = (ViewFlipper) findViewById(R.id.view_flipper);
-        final Button BluetoothOn = (Button) findViewById(R.id.enable_bluetooth);
         final TextView startText = (TextView) findViewById(R.id.start_text);
         // Check if bluetooth is available and enabled on the device
-        if(bluetooth != null)
+        if (bluetooth != null)
         {
-            if (bluetooth.isEnabled()) {
+            if (bluetooth.isEnabled())
+            {
                 viewFlipper.showNext();
             }
             else
             {
                 // If Bluetooth is not enabled, simply give user option to enable it
                 startText.setText(R.string.not_enabled);
-                BluetoothOn.setVisibility(View.VISIBLE);
             }
         }
     }
     public void enableBluetooth(View v){
         // onClick Listener for enabling Bluetooth
         // If bluetooth enabled, switch to response layout
-        if (bluetooth.enable()){
+        if (bluetooth.enable())
+        {
             viewFlipper.showNext();
         }
     }
