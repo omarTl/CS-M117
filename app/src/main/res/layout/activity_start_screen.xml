@@ -12,7 +12,8 @@
     <TextView
         android:id="@+id/start_text"
         android:layout_width="wrap_content"
-        android:text=""
+        android:layout_centerHorizontal="true"
+        android:text="@string/not_found"
         android:layout_below="@+id/lodestar_logo"
         android:layout_height="wrap_content" />
 </RelativeLayout>
