@@ -27,12 +27,14 @@ public class StartScreen extends AppCompatActivity {
             }
             else
             {
+                // If Bluetooth is not enabled, simply give user option to enable it
                 startText.setText("Bluetooth not enabled");
                 BluetoothOn.setVisibility(View.VISIBLE);
             }
         }
     }
     public void enableBluetooth(View v){
+        // onClick Listener for enabling Bluetooth
         if (bluetooth.enable()){
             BluetoothOn.setVisibility(View.INVISIBLE);
             startText.setText("Bluetooth enabled successfully");
