@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.bluetooth.*;
 import android.view.View;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -12,6 +13,7 @@ import android.widget.ViewFlipper;
 public class StartScreen extends AppCompatActivity {
     private BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
     private ViewFlipper viewFlipper;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +38,17 @@ public class StartScreen extends AppCompatActivity {
     }
     public void enableBluetooth(View v){
         // onClick Listener for enabling Bluetooth
+        // If bluetooth enabled, switch to response layout
         if (bluetooth.enable()){
             viewFlipper.showNext();
         }
     }
     public void victim(View v){
-        
+        intent = new Intent(this, VictimScreen.class);
+        startActivity(intent);
     }
-    public void firstResponder(View v){
-
+    public void responder(View v){
+        intent = new Intent(this, FirstResponderScreen.class);
+        startActivity(intent);
     }
 }
