@@ -16,4 +16,12 @@
         android:text="@string/not_found"
         android:layout_below="@+id/lodestar_logo"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/enable_bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enable"
+        android:layout_below="@+id/start_text" />
+
 </RelativeLayout>
