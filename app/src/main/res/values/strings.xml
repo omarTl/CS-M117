@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LodeStar</string>
     <string name="not_found">Bluetooth not found on this device!</string>
+    <string name="enable">Turn Bluetooth on?</string>
 </resources>
