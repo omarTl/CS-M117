@@ -38,7 +38,7 @@
                 android:id="@+id/type_of_response"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Who do you identify as?"
+                android:text="@string/identity"
                 android:layout_centerHorizontal="true" />
             <Button
                 android:id="@+id/responder"
