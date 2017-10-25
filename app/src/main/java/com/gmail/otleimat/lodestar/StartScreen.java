@@ -29,7 +29,7 @@ public class StartScreen extends AppCompatActivity {
             else
             {
                 // If Bluetooth is not enabled, simply give user option to enable it
-                startText.setText("Bluetooth not enabled");
+                startText.setText(R.string.not_enabled);
                 BluetoothOn.setVisibility(View.VISIBLE);
             }
         }
@@ -41,7 +41,7 @@ public class StartScreen extends AppCompatActivity {
         }
     }
     public void victim(View v){
-
+        
     }
     public void firstResponder(View v){
 
