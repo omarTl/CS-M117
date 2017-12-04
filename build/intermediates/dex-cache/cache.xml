@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\465a8c0293518c3292dedc5720cc44a82e1316a0\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_18e096f60d969c324d17de7461d79b092cff5550.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\bd3df56a22a00160fc4dbb6342581d9f150ee461\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_d682dea1f6f1aeecc277946178e7b9aa6885821f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\d7b986f4dbbed9d965ffc97703f173a4d3d715c0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_b624c7b5b4e1293e3a606bd46fc7d5fc39fc477b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\4033935826e9acc1512bcc2f673ac12314fa3eb3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_42b549a5a11f2e2f8a680a7daf480ac621035d92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\f5476fea595e418df8127156e79c707f370261a6\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_abab6e05a58dcdcf279b63a6610234a42dbfc176.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\Downloads\sdk-tools-windows-3859397\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_3a05f1548c0a7554185628f68e452a22956a854e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\f5476fea595e418df8127156e79c707f370261a6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_978bbca8e017c1359e162d19d1aa4535e8b7b54d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\3186cc2a6e7b0fe7ff872a908dcf287492e1f275\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_83383410aca80c75b95e6d6dac6dbd5558d04300.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\465a8c0293518c3292dedc5720cc44a82e1316a0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_5267cded3fa56d116bf8aec554369331685ca4b9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\283504cc188332fbb83973fce545bf609de317fe\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4700f436ede140fb804204f806c9cc3f08e386f4">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_052b920b4619a42477e0a005cc275762c3ee6d1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\3186cc2a6e7b0fe7ff872a908dcf287492e1f275\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_91de15bcb9e7a1fd48e52be55d335c3bce30e0a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\bd3df56a22a00160fc4dbb6342581d9f150ee461\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_7de51d19211c575946e90614edd5ce48f8a5cbbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\ee15f5eb860eff8d3cffd6ab4f08b6c05f3d1861\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_63e13028074fcdd81023966aabfbc8165d5526fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\441470abd3a18375e233406bd779d5ffeefec500\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_4ed4a1bd6860303661d3e543135cb305f14498b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\d7b986f4dbbed9d965ffc97703f173a4d3d715c0\output\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_07856fba1012d62bb47a0e1dae20eb8ae8497059.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6b7d9a26d719d733cc584970d7064e023d806a83">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_707b509be729f3eeffb41c93001007f70086f6bb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a5c6c105a5a12f811693c45356bab50a0f824a1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\9a9475891be454dcc2bb3bed6f5fd20ea34bd2d2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_3182d2006717d57177efd0065ece958cadbdd3cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\omart\.android\build-cache\e92c80029f77827f2c5ca3f59b5356512e7298ce\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\build\intermediates\pre-dexed\debug\classes_bcb26050d594224879cef1e1ec28fdfc4a2d0cb5.jar" />
+    </item>
+
+</items>
