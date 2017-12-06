@@ -49,7 +49,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -69,7 +68,7 @@ public class ResponderChat extends Fragment {
     private ViewFlipper viewFlipper;
     private ExpandableListViewAdapter listAdapter;
     private ExpandableListView expListView;
-    private List<String> listDataHeader, severeVictims;
+    private List<String> listDataHeader, severeVictims, slightVictims;
     private HashMap<String, List<String>> listDataChild;
     // Layout Views
     private ListView mConversationView;
@@ -125,11 +124,14 @@ public class ResponderChat extends Fragment {
         // Adding child data
         listDataHeader.add("All Victims");
         listDataHeader.add("Severely Injured");
+        listDataHeader.add("Slightly Injured");
         // Adding child data
         seen_victims = new ArrayList<>();
         severeVictims = new ArrayList<>();
+        slightVictims = new ArrayList<>();
         listDataChild.put(listDataHeader.get(0), seen_victims); // Header, Child data
         listDataChild.put(listDataHeader.get(1), severeVictims); // Header, Child data
+        listDataChild.put(listDataHeader.get(2), slightVictims); // Header, Child data
         listAdapter = new ExpandableListViewAdapter(mContext, listDataHeader, listDataChild);
     }
 
@@ -341,6 +343,8 @@ public class ResponderChat extends Fragment {
                     addInfo(seen_victims, victimInfo);
                     if (victimInfo.get(3).equals("Severely Injured"))
                         addInfo(severeVictims, victimInfo);
+                    if (victimInfo.get(3).equals("Slightly Injured"))
+                        addInfo(slightVictims, victimInfo);
                     listAdapter.notifyDataSetChanged();
                     Toast.makeText(activity,readMessage , Toast.LENGTH_SHORT).show();
                     mConversationArrayAdapter.add("Them: "+ readMessage);
@@ -368,7 +372,7 @@ public class ResponderChat extends Fragment {
         list.add("Condition: " + info.get(3));
         list.add("Age: " + info.get(1));
         list.add("Assistance needed: " + info.get(2));
-        list.add("Location: ");
+        list.add("Location: "+info.get(4) + "," + info.get(5));
     }
     private List<String> parse_input(String message){
         List<String> members = new ArrayList<>();

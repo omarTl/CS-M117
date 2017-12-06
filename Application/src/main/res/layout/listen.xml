@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:stackFromBottom="true"
-            android:transcriptMode="alwaysScroll" />
+            android:transcriptMode="alwaysScroll" />;
         <LinearLayout
             android:layout_below="@+id/in"
             android:layout_width="match_parent"

@@ -18,31 +18,9 @@
 package com.example.android.bluetoothchat;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.annotation.BoolRes;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentTransaction;
-import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ViewAnimator;
-import android.widget.ViewFlipper;
-
-import com.example.android.common.activities.SampleActivityBase;
 
 /**
  * A simple launcher activity containing a summary sample description, sample log and a custom
@@ -52,7 +30,6 @@ import com.example.android.common.activities.SampleActivityBase;
  * on other devices it's visibility is controlled by an item on the Action Bar.
  */
 public class MainActivity extends Activity {
-
 
     public static final String TAG = "MainActivity";
 
@@ -65,18 +42,13 @@ public class MainActivity extends Activity {
     public void victim(View v) {
         Intent intent = new Intent(MainActivity.this, VictimScreen.class);
         startActivity(intent);
+        finish();
     }
 
     public void responder(View v) {
         Intent intent = new Intent(MainActivity.this, ResponderScreen.class);
         startActivity(intent);
-      /*  viewFlipper = (ViewFlipper) findViewById(R.id.resp_flipper);
-        fragment.setType("Responder");
-        VictimRecord resp = new VictimRecord();
-        resp.setName("Omar");
-        fragment.setVictim(resp);
-        setUpSend();*/
-
+        finish();
     }
 
 

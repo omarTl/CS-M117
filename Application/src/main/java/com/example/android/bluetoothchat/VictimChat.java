@@ -20,17 +20,26 @@ package com.example.android.bluetoothchat;
  * limitations under the License.
  */
 
+
+import android.Manifest;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -62,14 +71,17 @@ public class VictimChat extends Fragment {
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
     private static final int REQUEST_ENABLE_BT = 3;
     private Spinner age, condition, help;
+    private Location location;
+    private String lat = "", lon = "";
     private ViewFlipper viewFlipper;
-    private TextView vict_name, vict_cond, vict_help, vict_age;
+    private TextView vict_name, vict_cond, vict_help, vict_age, vict_loc;
     // Layout Views
+    private Activity activity;
     private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
     private String mType;
-
+    private Context mContext;
     /**
      * Name of the connected device
      */
@@ -109,7 +121,6 @@ public class VictimChat extends Fragment {
         }
     }
 
-
     @Override
     public void onStart() {
         super.onStart();
@@ -135,7 +146,6 @@ public class VictimChat extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
         // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
@@ -167,8 +177,7 @@ public class VictimChat extends Fragment {
         vict_name = (TextView) view.findViewById(R.id.victim_name);
         vict_help = (TextView) view.findViewById(R.id.victim_help);
         vict_age = (TextView) view.findViewById(R.id.victim_age);
-
-
+        vict_loc = (TextView) view.findViewById(R.id.victim_loc);
     }
 
     /**
@@ -178,6 +187,7 @@ public class VictimChat extends Fragment {
         mType = type;
     }
     public void setmView(int v){mView = v;}
+    public void setmContext(Context c){this.mContext = c;}
 
     private void setupChat() {
 
@@ -198,21 +208,27 @@ public class VictimChat extends Fragment {
                     String message = textView.getText().toString();
                     vict_name.setText("NAME: "+message);
                     String a, c, h;
+
+                    viewFlipper.showNext();
                     a = String.valueOf(age.getSelectedItem());
                     c = String.valueOf(help.getSelectedItem());
                     h = String.valueOf(condition.getSelectedItem());
-                    sendMessage(message+":"+ a  +":"+c +":"+ h);
+                    sendMessage(message+":"+ a  +":"+c +":"+ h + ":" + lat + ":" + lon);
                 }
             }
         });
 
         // Initialize the BluetoothChatService to perform bluetooth connections
         mChatService = new BluetoothChatService(getActivity(), mHandler);
-
         // Initialize the buffer for outgoing messages
         mOutStringBuffer = new StringBuffer("");
     }
-
+    public void setLat(String lat){
+        this.lat = lat;
+    }
+    public void setLong(String lon){
+        this.lon = lon;
+    }
     /**
      * Makes this device discoverable for 300 seconds (5 minutes).
      */
@@ -297,7 +313,9 @@ public class VictimChat extends Fragment {
         }
         actionBar.setSubtitle(subTitle);
     }
+    public void setActivity(Activity a){
 
+    }
     /**
      * The Handler that gets information back from the BluetoothChatService
      */
@@ -323,10 +341,10 @@ public class VictimChat extends Fragment {
                     break;
                 case Constants.MESSAGE_WRITE:
 
-                    viewFlipper.showNext();
                     vict_cond.setText("CONDITION: "+String.valueOf(condition.getSelectedItem()));
                     vict_help.setText("HELP NEEDED: " + String.valueOf(help.getSelectedItem()));
                     vict_age.setText("AGE: "+String.valueOf(age.getSelectedItem()));
+                    vict_loc.setText("LOCATION: " + lat +"," + lon);
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
@@ -428,5 +446,4 @@ public class VictimChat extends Fragment {
         }
         return false;
     }
-
 }
