@@ -49,7 +49,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-
+import com.example.android.bluetoothchat.VictimDatabaseHelper;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -69,7 +69,7 @@ public class ResponderChat extends Fragment {
     private ViewFlipper viewFlipper;
     private ExpandableListViewAdapter listAdapter;
     private ExpandableListView expListView;
-    private List<String> listDataHeader, severeVictims;
+    private List<String> listDataHeader, victimText, severeVictimText;
     private HashMap<String, List<String>> listDataChild;
     // Layout Views
     private ListView mConversationView;
@@ -77,7 +77,10 @@ public class ResponderChat extends Fragment {
     private Button mSendButton;
     private String mType;
     private Context mContext;
-    private List<String> seen_victims;
+    private List<Person> seen_victims;
+
+    // local db
+    private VictimDatabaseHelper db = VictimDatabaseHelper.getInstance(this.getContext());
 
     /**
      * Name of the connected device
@@ -127,9 +130,10 @@ public class ResponderChat extends Fragment {
         listDataHeader.add("Severely Injured");
         // Adding child data
         seen_victims = new ArrayList<>();
-        severeVictims = new ArrayList<>();
-        listDataChild.put(listDataHeader.get(0), seen_victims); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), severeVictims); // Header, Child data
+        victimText = new ArrayList<>();
+        severeVictimText = new ArrayList<>();
+        listDataChild.put(listDataHeader.get(0), victimText); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), severeVictimText); // Header, Child data
         listAdapter = new ExpandableListViewAdapter(mContext, listDataHeader, listDataChild);
     }
 
@@ -337,10 +341,14 @@ public class ResponderChat extends Fragment {
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
-                    List<String> victimInfo = parse_input(readMessage);
-                    addInfo(seen_victims, victimInfo);
-                    if (victimInfo.get(3).equals("Severely Injured"))
-                        addInfo(severeVictims, victimInfo);
+                    Person person = new Person();
+//                    List<String> victimInfo = parse_input(readMessage);
+                    person.parseInformation(readMessage);
+                    seen_victims.add(person);
+                    db.addOrUpdatePerson(person);
+                    addInfo(victimText, person);
+                    if (person.getCondition().equals("Severely Injured"))
+                        addInfo(severeVictimText, person);
                     listAdapter.notifyDataSetChanged();
                     Toast.makeText(activity,readMessage , Toast.LENGTH_SHORT).show();
                     mConversationArrayAdapter.add("Them: "+ readMessage);
@@ -363,12 +371,12 @@ public class ResponderChat extends Fragment {
         }
     };
 
-    private void addInfo(List<String> list, List<String> info){
-        list.add("Name: " + info.get(0));
-        list.add("Condition: " + info.get(3));
-        list.add("Age: " + info.get(1));
-        list.add("Assistance needed: " + info.get(2));
-        list.add("Location: ");
+    private void addInfo(List<String> list, Person person){
+        list.add("Name: " + person.getName());
+        list.add("Condition: " + person.getCondition());
+        list.add("Age: " + person.getAge());
+        list.add("Assistance needed: " + person.getHelp());
+        list.add("Location: " + person.getLocationAsString());
     }
     private List<String> parse_input(String message){
         List<String> members = new ArrayList<>();

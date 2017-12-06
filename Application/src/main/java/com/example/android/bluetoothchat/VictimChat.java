@@ -55,6 +55,7 @@ import org.w3c.dom.Text;
  */
 public class VictimChat extends Fragment {
 
+    private static final Person person = new Person();
     private static final String TAG = "BluetoothChatFragment";
     private static int mView = R.layout.submit;
     // Intent request codes
@@ -195,13 +196,12 @@ public class VictimChat extends Fragment {
                 View view = getView();
                 if (null != view) {
                     TextView textView = (TextView) view.findViewById(R.id.edit_text_out);
-                    String message = textView.getText().toString();
-                    vict_name.setText("NAME: "+message);
-                    String a, c, h;
-                    a = String.valueOf(age.getSelectedItem());
-                    c = String.valueOf(help.getSelectedItem());
-                    h = String.valueOf(condition.getSelectedItem());
-                    sendMessage(message+":"+ a  +":"+c +":"+ h);
+                    person.setName(textView.getText().toString());
+                    vict_name.setText("NAME: "+ person.getName());
+                    person.setAge(String.valueOf(age.getSelectedItem()));
+                    person.setCondition(String.valueOf(help.getSelectedItem()));
+                    person.setHelp(String.valueOf(condition.getSelectedItem()));
+                    sendMessage(person.getInformation());
                 }
             }
         });

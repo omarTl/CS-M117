@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\omart\Desktop\LodeStar\LodeStar\Application\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/alexmw/Development/CS-M117/Application/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/alexmw/Development/CS-M117/Application/src/debug/shaders"/></dataSet></merger>
