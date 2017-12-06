@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Mon Dec 04 16:53:11 PST 2017
 base.0=/Users/alexmw/Development/CS-M117/Application/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
+=======
+#Mon Dec 04 23:47:02 PST 2017
+base.0=C\:\\Users\\omart\\Desktop\\LodeStar\\LodeStar\\Application\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_0
+>>>>>>> 3723e9e05cb7c64232e86b1493eeeaedd57586aa
 renamed.0=classes.dex

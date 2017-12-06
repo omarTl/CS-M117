@@ -69,7 +69,7 @@ public class ResponderChat extends Fragment {
     private ViewFlipper viewFlipper;
     private ExpandableListViewAdapter listAdapter;
     private ExpandableListView expListView;
-    private List<String> listDataHeader, victimText, severeVictimText;
+    private List<String> listDataHeader, victimText, severeVictimText, slightVictimText;
     private HashMap<String, List<String>> listDataChild;
     // Layout Views
     private ListView mConversationView;
@@ -128,12 +128,15 @@ public class ResponderChat extends Fragment {
         // Adding child data
         listDataHeader.add("All Victims");
         listDataHeader.add("Severely Injured");
+        listDataHeader.add("Slightly Injured");
         // Adding child data
         seen_victims = new ArrayList<>();
         victimText = new ArrayList<>();
         severeVictimText = new ArrayList<>();
+        slightVictimText = new ArrayList<>();
         listDataChild.put(listDataHeader.get(0), victimText); // Header, Child data
         listDataChild.put(listDataHeader.get(1), severeVictimText); // Header, Child data
+        listDataChild.put(listDataHeader.get(2), slightVictims); // Header, Child data
         listAdapter = new ExpandableListViewAdapter(mContext, listDataHeader, listDataChild);
     }
 
@@ -349,6 +352,8 @@ public class ResponderChat extends Fragment {
                     addInfo(victimText, person);
                     if (person.getCondition().equals("Severely Injured"))
                         addInfo(severeVictimText, person);
+                    if (person.getCondition().equals("Slightly Injured"))
+                        addInfo(slightVictimText, victimInfo);
                     listAdapter.notifyDataSetChanged();
                     Toast.makeText(activity,readMessage , Toast.LENGTH_SHORT).show();
                     mConversationArrayAdapter.add("Them: "+ readMessage);
